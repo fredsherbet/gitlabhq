@@ -98,16 +98,16 @@ ActiveRecord::Schema.define(:version => 20120905043334) do
     t.string   "name"
     t.string   "path"
     t.text     "description"
-    t.datetime "created_at",                               :null => false
-    t.datetime "updated_at",                               :null => false
-    t.boolean  "private_flag",           :default => true, :null => false
+    t.datetime "created_at",                                   :null => false
+    t.datetime "updated_at",                                   :null => false
+    t.boolean  "private_flag",           :default => false,    :null => false
     t.string   "code"
     t.integer  "owner_id"
     t.string   "default_branch"
-    t.boolean  "issues_enabled",         :default => true, :null => false
-    t.boolean  "wall_enabled",           :default => true, :null => false
-    t.boolean  "merge_requests_enabled", :default => true, :null => false
-    t.boolean  "wiki_enabled",           :default => true, :null => false
+    t.boolean  "issues_enabled",         :default => true,     :null => false
+    t.boolean  "wall_enabled",           :default => true,     :null => false
+    t.boolean  "merge_requests_enabled", :default => true,     :null => false
+    t.boolean  "wiki_enabled",           :default => true,     :null => false
   end
 
   create_table "protected_branches", :force => true do |t|
