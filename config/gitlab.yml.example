@@ -70,14 +70,38 @@ omniauth:
   # If your favorite auth provider is not listed you can user others:
   # see https://github.com/gitlabhq/gitlabhq/wiki/Using-Custom-Omniauth-Providers
   providers:
-    # - { name: 'google_oauth2', app_id: 'YOUR APP ID',
-    #     app_secret: 'YOUR APP SECRET',
-    #     args: { access_type: 'offline', approval_prompt: '' } }
-    # - { name: 'twitter', app_id: 'YOUR APP ID',
-    #     app_secret: 'YOUR APP SECRET'}
-    # - { name: 'github', app_id: 'YOUR APP ID',
-    #     app_secret: 'YOUR APP SECRET' }
 
+    #google_oauth2:
+    #  - 'YOUR APP ID'
+    #  - 'YOUR APP SECRET'
+    #  - args:
+    #      access_type: 'offline'
+    #      approval_prompt: ''
+
+    #twitter:
+    #  - 'YOUR APP ID'
+    #  - 'YOUR APP SECRET'
+
+    #github:
+    #  - 'YOUR APP ID'
+    #  - 'YOUR APP SECRET'
+
+    #ldap:
+    #  host: '_your_ldap_server'
+    #  base: '_the_base_where_you_search_for_users'
+    #  port: 636
+    #  uid: 'sAMAccountName'
+    #  method: 'ssl' # plain
+    #  bind_dn: '_the_full_dn_of_the_user_you_will_bind_with'
+    #  password: '_the_password_of_the_bind_user'
+
+    #saml:                                                                                                                            
+    #  assertion_consumer_service_url: 'HTTP_SAML_SESSION_ID'
+    #  issuer: 'SAML_ISSUER'
+    #  idp_sso_target_url: "HTTP_SAML_SSO_URL"
+    #  idp_cert: "SAML_CERT"
+    #  idp_cert_fingerprint: "SAML_FINGERPRINT"
+    #  name_identifier_format: "SAML_NAME_FORMAT"
 
 
 #
