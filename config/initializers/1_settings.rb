@@ -235,6 +235,14 @@ class Settings < Settingslogic
     end
 
     # FIXME: Deprecated: remove for 4.1
+    def omniauth_allow_single_sign_on?
+      ActiveSupport::Deprecation.warn("Settings.omniauth_allow_single_sign_on? is deprecated and will be removed from GitLab 4.1", caller)
+      omniauth.allow_single_sign_on
+    rescue Settingslogic::MissingSetting
+      false
+    end
+
+    # FIXME: Deprecated: remove for 4.1
     def omniauth_providers
       ActiveSupport::Deprecation.warn("Settings.omniauth_providers is deprecated and will be removed from GitLab 4.1", caller)
       omniauth.providers
